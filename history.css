@@ -7,12 +7,12 @@
 :root {
     --fg-clr-normal: #111;
     --fg-clr-gray: #3a3a3a;
-    --fg-clr-link: rgb(7, 118, 20);
-    --fg-clr-accent: rgb(0, 255, 0);
+    --fg-clr-link: rgb(255, 255, 255);
+    --fg-clr-accent: rgb(255, 255, 255);/* används ej*/
     --fg-clr-white: #fff;
     
-    --bg-clr-header: rgb(12, 108, 29);
-    --bg-clr-blue: rgb(208, 253, 212);
+    --bg-clr-header: rgb(9, 58, 18);
+    --bg-clr-blue: rgb(56, 105, 60);
     --bg-clr-offwhite: whitesmoke;
 
     --line-clr-black: #111;
@@ -34,6 +34,9 @@
     font-family: 'Titillium Web', sans-serif;
     font-weight: var(--ft-weight-400);
     margin: 0;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -69,8 +72,8 @@ body {
 }
 
 .main-content {
-    /* width: 60%;
-    margin-inline: auto; */
+    width: 60%;
+    margin-inline: auto;
     background: var(--bg-clr-offwhite);
 } 
 
@@ -126,6 +129,20 @@ p {
     text-decoration: white;
 }
 
+.column-txt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-navigation {
+    list-style: none;
+    list-style-type: none;
+}
+
+.footer-text {
+    color: white;
+    font-weight: var(--ft-weight-400);
+}
 
 /* link styling */
 
@@ -134,7 +151,9 @@ a {
 }
 
 .nav-link {
-    color: var(--fg-clr-link)
+    color: var(--fg-clr-link);
+    
+    
 }
 
 .nav-link:visited {
@@ -142,8 +161,17 @@ a {
 }
 
 .nav-link:hover {
-    text-decoration: underline;
     color: var(--fg-clr-accent);
+}
+
+.list-style1 a{
+    letter-spacing: 0.1rem;
+    transition: all ease 0.1s   
+
+}
+.list-style1:hover{
+    transform: scale(1.15);
+
 }
 
 
