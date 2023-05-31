@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="history.css" />
-
-    <title id="title" class="title">HTMLs Historia & DOM</title>
+    <link rel="stylesheet" href="historia.css" />
+    <title>HTMLs Historia & DOM</title>
   </head>
   <body class="container">
+    <a class="skip-link" href="#history">Skip to main content</a>
     <header class="header">
       <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1>
-      <nav class="primary-navigation">
-        <ul class="primary-navigation__links">
-          <li class="list-style1"><a class="nav-link" href="#">Hem</a></li>
-          <li class="list-style1">
-            <a class="nav-link" href="#history">Historia</a>
-          </li>
-          <li class="list-style1">
-            <a class="nav-link" href="#dom">Hur funkar det?</a>
-          </li>
-        </ul>
-      </nav>
     </header>
+    <nav class="primary-navigation">
+      <ul class="primary-navigation__links">
+        <li class="list-style1"><a class="nav-link" href="#">Hem</a></li>
+        <li class="list-style1">
+          <a class="nav-link" href="#history">Historia</a>
+        </li>
+        <li class="list-style1">
+          <a class="nav-link" href="#dom">Hur funkar det?</a>
+        </li>
+        <li class="list-style1">
+          <a class="nav-link" href="#laws">Lagar</a>
+        </li>
+      </ul>
+    </nav>
     <main class="main-content">
-      <section class="main-content__history">
-        <header class="header-html">
-          <h2 id="history" class="header2">HTMLs Historia</h2>
-        </header>
-        <p>
-          Under de första fem åren (1990-1995) gick HTML igenom ett antal
-          revisioner och fick ett antal tillägg, främst värd först på CERN och
-          sedan på IETF.
-        </p>
-        <img
-          class="inline-image | inline-image-medium"
-          src="/img/html_versions.png"
-          alt="all the html versions"
-        />
-        <div class="column-txt">
+      <div class="grid-create">
+        <section>
+          <header class="grid-col-span2 titles">
+            <h2 id="history">HTMLs Historia</h2>
+          </header>
+          <p>
+            Under de första fem åren (1990-1995) gick HTML igenom ett antal
+            revisioner och fick ett antal tillägg, främst värd först på CERN och
+            sedan på IETF.
+          </p>
+          <img
+            class="inline-img img-custom"
+            src="/imgs/HTML-Released-year-11.png"
+            alt="all the html versions"
+          />
           <p>
             Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett
             första misslyckat försök att utöka HTML 1995, känd som HTML 3.0,
@@ -119,6 +120,9 @@
             inkludera betydligt fler detaljer än vad som tidigare ansetts vara
             normen.
           </p>
+         
+        </section>
+        <section>
           <p>
             2006 indikerade W3C ett intresse av att trots allt delta i
             utvecklingen av HTML5, och 2007 bildade W3C en arbetsgrupp för att
@@ -135,36 +139,57 @@
             plattformen. Under 2019 undertecknade WHATWG och W3C ett avtal om
             att samarbeta om en enda version av HTML framöver: detta dokument.
           </p>
-        </div>
-        <img
-          class="inline-image | inline-image-small"
-          src="/img/img_html.jpg"
-          alt="html5 logo"
-        />
-      </section>
-      <section id="dom" class="main-content__dom">
-        <header class="header-dom">
-          <h2>Hur fungerar webben och vad är DOM?</h2>
-        </header>
-        <div class="column-txt">
+          <header class="grid-col-span2 titles">
+            <h2 id="dom">Hur fungerar webben och vad är DOM?</h2>
+          </header>
           <p>
-            Webbens funktionssätt bygger på en klient-server-arkitektur, där en
-            klient (vanligtvis en webbläsare) skickar en förfrågan till en
-            server, som i sin tur svarar med de begärda resurserna. Dessa visas
-            sedan på användarens enhet. Document Object Model (DOM) är ett
-            programmeringsgränssnitt som möjliggör att en webbsida kan hämtas
-            och manipuleras av skript. Det representerar strukturen på en
-            webbsida som en trädliknande modell, med olika element på sidan
-            (såsom text, bilder och videor) som noder i trädet. På så sätt blir
-            det möjligt för skript att dynamiskt ändra innehåll, layout och stil
-            på en sida.
+            Document Object Model (DOM) är en standard som beskriver hur en HTML- eller XML-dokument ska representeras som en trädstruktur av objekt och relationer mellan dessa objekt. Det är en central del av webbutvecklingen och används för att manipulera dokument i en webbläsare.
+            En DOM-representation av ett HTML-dokument innehåller alla element i dokumentet, inklusive huvudelementet, såsom html, head, och body, samt alla dess underordnade element, såsom div, p, h1, etc. Varje element i DOM-trädet är representerat som ett objekt med en mängd egenskaper och metoder som beskriver elementets innehåll och egenskaper.
+            Genom att använda DOM-API:et kan man hämta och manipulera element i dokumentet på ett enhetligt och flexibelt sätt. Man kan till exempel hämta innehållet i en specifik tagg, ändra dess innehåll eller stil, eller lägga till eller ta bort element från dokumentet. Dessa åtgärder kan utföras dynamiskt, till exempel när en användare interagerar med en webbsida, eller vid läsning av data från en extern källa.
+            DOM är en industristandard och stöds av de flesta webbläsare, så att utvecklare kan skapa korsbrytande webbapplikationer som fungerar på olika plattformar och enheter. Det är också möjligt att använda DOM i kombination med andra tekniker som JavaScript, CSS, och Ajax för att skapa avancerade webbapplikationer.
+            I sammanfattning är DOM en central teknik för webbutveckling, som ger utvecklare möjligheten att manipulera och ändra innehållet i en webbsida på ett enhetligt sätt, och således skapa mer interaktiva och användarvänliga webbapplikationer.
           </p>
+          <header class="grid-col-span2 titles">
+            <h2 id="laws">Lagar och Bestämmelser</h3>
+          </header>
+          <p>
+            GDPR, eller General Data Protection Regulation, är en EU-lag som
+            trädde i kraft den 25 maj 2018. Den syftar till att skydda
+            personuppgifter och ge individer mer kontroll över hur deras data
+            används. För att vara i enlighet med GDPR när man skapar en hemsida,
+            bör man informera besökarna om vilken data som samlas in, hur den
+            används och vilka rättigheter de har när det gäller deras data. Det
+            är också viktigt att implementera säkra metoder för att hantera och
+            skydda personuppgifter. Upphovsrätten - det är viktigt att
+            respektera upphovsrätten för alla bilder, text och annat innehåll
+            som används på din hemsida. Sekretesslagen - om din hemsida hanterar
+            känsliga personuppgifter, som exempelvis medicinska uppgifter, måste
+            du följa sekretesslagen. Integritetslagen - Integritetslagen
+            reglerar hur man hanterar och skyddar personuppgifter och det är
+            viktigt att följa dessa regler när man skapar en hemsida.
+            Cookieslagen - om du använder cookies på din hemsida måste du
+            informera besökarna om detta och ge dem möjlighet att välja bort
+            cookies.
+          </p>
+        </section>
+      </div>
+      <section class="form-path">
+          <form>
+            <div>
+              <label class="label"for="fname">Förnamn:</label>
+              <input class="fname" type="text" id="fname" name="fname" placeholder=" Eric" required />
+            
+           
+              <label class="label"for="lname">Efternamn:</label>
+              <input class="lname" type="text" id="lname" name="lname" placeholder=" Kenzez" required/>
+              <label class="label"for="email">Email:</label>
+              <input class="email" type="email" id="email" name="email" placeholder=" Eric@Kenzez.com" required />
+              <label class="label" for="msg">Meddelande:</label>
+              <textarea class="msg" placeholder="Meddelande" name="msg" id="msg" required></textarea>
+              <input type="submit" name="" id="submit">
+            </div>
+          </form>
         </div>
-        <img
-          class="inline-image | inline-image-medium"
-          src="/img/dom.png"
-          alt="document object model schematic"
-        />
       </section>
     </main>
     <footer class="footer">
